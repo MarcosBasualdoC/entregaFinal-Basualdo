@@ -1,0 +1,69 @@
+body {
+    background-image: url("verduleria.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ***************INDEX.HTML***************** */
+
+.ticket {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2% 35%;
+    background-color: rgb(228, 231, 231);
+    border-radius: 5px;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.ticket h1 {
+    font-size: 2rem;
+    border-bottom: 2px black solid;
+}
+
+.ticket h2 {
+    margin-top: -1rem;
+    font-size: 1.4rem;
+}
+
+#carrito {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 1rem 3rem;
+    margin: 1rem;
+    margin-bottom: 2rem;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+#carrito p {
+    font-weight: 700;
+}
+
+#boton {
+    margin: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* *****************COMPRA.HTML************************ */
+
+.compraRealizada {
+    margin: 5% 20%;
+}
+
+.compraRealizada h1 {
+    border: none;
+    padding: 1rem;
+}
+
+.compraRealizada h2 {
+    padding: 2px;
+}
+
+.compraRealizada button {
+    margin: 1rem;
+    margin-bottom: 2rem;
+}
