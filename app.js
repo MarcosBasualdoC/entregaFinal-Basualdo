@@ -34,16 +34,14 @@ document.getElementById("carrito").appendChild(listaProductos);
 
 let total = 0;
 
-for (let i = 0; i < carrito.length; i++) {
-    let productoActual = carrito[i];
+carrito.forEach(function (productoActual) {
     let lista = document.createElement("li");
     let texto = document.createTextNode(productoActual.nombre + " x " + productoActual.cantidad + ": $" + 
-    (productoActual.precio * productoActual.cantidad).toFixed(2)); 
+    (productoActual.precio * productoActual.cantidad).toFixed(2));
     lista.appendChild(texto);
     listaProductos.appendChild(lista);
-
-    total += productoActual.precio * productoActual.cantidad; 
-}
+    total += productoActual.precio * productoActual.cantidad;
+});
 
 let elementoTotal = document.createElement("p");
 let textoTotal = document.createTextNode("Total: $" + total.toFixed(2));
