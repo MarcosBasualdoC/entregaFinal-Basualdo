@@ -1,69 +1,112 @@
-body {
+body{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-image: url("verduleria.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    color: aliceblue;
+    padding: 0;
+    margin: 0;
 }
 
-/* ***************INDEX.HTML***************** */
+/*************************************************/
 
-.ticket {
+header{
+    background-color: #41b632;
+    height: 5rem;
+    /* margin-top: -1.4rem; */
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+}
+
+h1{
+    font-size: 3rem;
+}
+
+/*************************************************/
+
+main{
+    display: flex;
     flex-direction: column;
-    margin: 2% 35%;
-    background-color: rgb(228, 231, 231);
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+
+form{
+    background-color: aliceblue;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+}
+
+form input{
+    margin: 0.4rem;
+    height: 1.5rem;
+    width: 10rem;
+}
+
+.botones{
+    background-color: #41b632;
+    color: aliceblue;
     border-radius: 5px;
-    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-}
-
-.ticket h1 {
-    font-size: 2rem;
-    border-bottom: 2px black solid;
-}
-
-.ticket h2 {
-    margin-top: -1rem;
-    font-size: 1.4rem;
-}
-
-#carrito {
-    border: 2px solid black;
-    border-radius: 5px;
-    padding: 1rem 3rem;
-    margin: 1rem;
-    margin-bottom: 2rem;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-}
-
-#carrito p {
-    font-weight: 700;
-}
-
-#boton {
-    margin: 1rem;
-    margin-bottom: 2rem;
-}
-
-/* *****************COMPRA.HTML************************ */
-
-.compraRealizada {
-    margin: 5% 20%;
-}
-
-.compraRealizada h1 {
     border: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.botones:hover{
+    color: #b3dbad;
+}
+
+/*************************************************/
+
+.carritoBox{
+    background-color: aliceblue;
+    color: black;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+}
+
+.carritoBox h2{
+    margin-top: -0.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.carritoBox li{
+    margin-left: -2.4rem;
+    list-style: none;
+}
+
+.carritoBox p{
+    font-weight: 700;
+    /* text-align: center; */
+}
+
+.carritoBox button{
+    margin-top: 0.5rem;
+}
+
+/*************************************************/
+/****************COMPRA.HTML**********************/
+/*************************************************/
+
+.gracias{
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+}
+
+.gracias .botones{
     padding: 1rem;
-}
-
-.compraRealizada h2 {
-    padding: 2px;
-}
-
-.compraRealizada button {
-    margin: 1rem;
-    margin-bottom: 2rem;
 }

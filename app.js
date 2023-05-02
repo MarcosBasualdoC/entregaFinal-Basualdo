@@ -1,65 +1,75 @@
-//MENSAJE DE BIENVENIDA
+///variables 
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+let total = localStorage.getItem("total") || 0;
 
-alert("Bienvenido a la tienda de VERDULERÍA ONLINE")
+///funcion para agregar los productos al carrito
+function agregarProducto(evento) {
+    evento.preventDefault();
+    const nombre = document.getElementById("nombre").value;
+    const precio = parseInt(document.getElementById("precio").value);
+    const cantidad = parseInt(document.getElementById("cantidad").value);
 
+    const completarCampos = nombre && !isNaN(precio) && !isNaN(cantidad) ? true : false;
 
-//SELECCION DE PRODUCTOS Y PRECIOS
+    if (!completarCampos) {
+        alert("Por favor, complete todos los campos.");
+        return;
+    }
 
-function agregarProductos() {
-    let carrito = [];
-    do {
-        let nombre = prompt("Ingresá el nombre del producto:");
-        let precio = parseFloat(prompt("Ingresá el precio del producto:"));
-        while (isNaN(precio) || precio <= 0) {
-            precio = parseFloat(prompt("Ingresá un precio válido y mayor que 0:"));
-        }
-        let cantidad = parseInt(prompt("Ingresá la cantidad de productos:")); 
-        while (isNaN(cantidad) || cantidad <= 0) {
-            cantidad = parseInt(prompt("Ingresá una cantidad válida y mayor que 0:"));
-        }
-        let producto = new Producto(nombre, precio, cantidad); 
-        carrito.push(producto);
-        var respuesta = prompt("¿Deseas agregar otro producto? (s/n)");
-    } while (respuesta.toLowerCase() === 's');
-    return carrito;
+    const producto = new Producto(nombre, precio, cantidad);
+    carrito.push(producto);
+    total = parseFloat(total) + (precio * cantidad);
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    localStorage.setItem("total", total);
+    mostrarCarrito();
+    totalActualizado();
+    document.getElementById("formulario").reset();
 }
 
-let carrito = agregarProductos();
+////funcion para la lista del carrito
+function mostrarCarrito() {
+    const carritoElemento = document.getElementById("carrito");
+    carritoElemento.innerHTML = "";
 
+    carrito.forEach((producto) => {
+        const li = document.createElement("li");
+        li.innerHTML = `${producto.nombre} - $${producto.precio} x ${producto.cantidad} = $${producto.precio * producto.cantidad}`;
+        carritoElemento.appendChild(li);
+    });
+}
 
-//TICKET
+function totalActualizado() {
+    const totalElemento = document.getElementById("total");
+    totalElemento.innerHTML = `${total}`;
+}
 
-let listaProductos = document.createElement("ul");
-document.getElementById("carrito").appendChild(listaProductos);
-
-let total = 0;
-
-carrito.forEach(function (productoActual) {
-    let lista = document.createElement("li");
-    let texto = document.createTextNode(productoActual.nombre + " x " + productoActual.cantidad + ": $" + 
-    (productoActual.precio * productoActual.cantidad).toFixed(2));
-    lista.appendChild(texto);
-    listaProductos.appendChild(lista);
-    total += productoActual.precio * productoActual.cantidad;
-});
-
-let elementoTotal = document.createElement("p");
-let textoTotal = document.createTextNode("Total: $" + total.toFixed(2));
-elementoTotal.appendChild(textoTotal);
-listaProductos.appendChild(elementoTotal);
-
-
-//BOTON
-
-let botonComprar = document.createElement("button");
-let textoComprar = document.createTextNode("Comprar ahora");
-botonComprar.appendChild(textoComprar);
-botonComprar.addEventListener("click", function () {
+///funcion para pagar
+function pagarCarrito() {
     if (confirm("¿Desea realizar la compra?")) {
         window.location.href = "compra.html";
+        limpiarCarrito();
     }
-});
+}
+
+////funcion para limpiar el carrito
+function limpiarCarrito() {
+    carrito.length = 0;
+    total = 0;
+    localStorage.removeItem("carrito");
+    localStorage.removeItem("total");
+    mostrarCarrito();
+    totalActualizado();
+}
+
+/// funcion para el total
+function calcularTotal() {
+    return carrito.reduce((total, producto) => total + (producto.precio * producto.cantidad), 0);
+}
 
 
-document.getElementById("boton").appendChild(botonComprar);
-
+//// los EventListener
+document.getElementById("formulario").addEventListener("submit", agregarProducto);
+document.getElementById("pagar").addEventListener("click", pagarCarrito);
+document.getElementById("limpiar").addEventListener("click", limpiarCarrito);
+window.addEventListener("load", mostrarCarrito);
+window.addEventListener("load", totalActualizado);
