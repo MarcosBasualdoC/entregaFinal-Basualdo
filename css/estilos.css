@@ -1,0 +1,236 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: url("../imagenes/verduleria.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* color: aliceblue; */
+    padding: 0;
+    margin: 0;
+}
+
+/*************************************************/
+
+header {
+    background-color: #41b632;
+    height: 5rem;
+    /* margin-top: -1.4rem; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+    width: 100%;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+.mostrarCarrito{
+    position: relative;
+    left: 9rem;
+    background-image: url("../imagenes/carrito.png");
+    height: 2rem;
+    width: 4rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position:center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+}
+
+.mostrarCarrito:active{
+    box-shadow: none;
+}
+
+/*************************************************/
+
+#productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 15%;
+    margin-top: 4rem;
+}
+
+.producto {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    width: calc(25% - 20px);
+    margin-bottom: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+}
+
+.producto h3 {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+.producto h4{
+    font-size: .9rem;
+    font-weight: 400;
+    margin-top: 0rem;
+}
+
+.producto p {
+    margin: -.5rem 0 1rem 0;
+    font-weight: 700;
+    font-size: 1.2rem;
+    
+}
+
+input {
+    width: 15%;
+    margin-bottom: 0.5rem;
+    margin-right: 5px
+}
+
+.divCantidad {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+  }
+
+
+.producto button {
+    background-color: #41b632;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.producto button:active{
+    background-color: #49863f
+}
+
+/***************************************/
+
+
+.carrito{ 
+    display: none;
+    right: 5px;
+    width: 18%;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    position: absolute;
+    right: 5px;
+    top: 5rem;
+}
+
+.productoCarrito{
+    border-bottom: 1px solid #000000;
+}
+
+.productoCarrito h3{
+    font-size: 1rem;
+    margin: .5rem 0;
+}
+
+.productoCarrito p{
+    font-size: .9rem;
+    margin: .5rem 0;
+}
+
+.productoCarrito button{
+    margin-bottom: 5px;
+    position: absolute;
+    left: 12rem;
+    /* top: 0rem; */
+    margin-top: -1.65rem;
+    background-color: #404e3e;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    /* padding: 10px; */
+    cursor: pointer;
+
+}
+
+.pagarLimpiar{
+    background-color: #49863f;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    /* padding: 10px; */
+    cursor: pointer;
+    margin: 5px 5px 0 0;
+    padding: 4px;
+}
+
+.limpiar{
+    background-color: #404e3e;
+}
+
+.total{
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+
+/*************************************************/
+/****************COMPRA.HTML**********************/
+/*************************************************/
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    margin: 3rem;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.datosFormulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .3rem;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+}
+
+.datosFormulario input{
+    width: 90%;
+    border-color: #49863f;
+}
+
+.metodoFormulario{
+    background-color: #ffffff;
+    padding: .5rem 2rem;
+    margin-top: 1rem;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+    width: 38rem;
+}
+
+.metodoFormulario h2{
+    text-align: center;
+    margin-top: 0rem;
+}
+
+.metodoFormulario input{
+    width: 20%;
+}
+
+option{
+    border-color: #49863f;
+}

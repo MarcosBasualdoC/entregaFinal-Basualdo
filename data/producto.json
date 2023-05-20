@@ -1,0 +1,86 @@
+[
+    {
+        "imagen": "imagenes/papa.jpg",
+        "nombre": "Papa",
+        "precio": 1800,
+        "cantidadXCajon": 25,
+        "id": 1
+    },
+    {
+        "imagen": "imagenes/batata.png",
+        "nombre": "Batata",
+        "precio": 6500,
+        "cantidadXCajon": 22,
+        "id": 2
+    },
+    {
+        "imagen": "imagenes/cebolla.png",
+        "nombre": "Cebolla",
+        "precio": 1500,
+        "cantidadXCajon": 18,
+        "id": 3
+    },
+    {
+        "imagen": "imagenes/lechuga.png",
+        "nombre": "Lechuga",
+        "precio": 800,
+        "cantidadXCajon": 10,
+        "id": 4
+    },
+    {
+        "imagen": "imagenes/limon.png",
+        "nombre": "Limón",
+        "precio": 1500,
+        "cantidadXCajon": 16,
+        "id": 5
+    },
+    {
+        "imagen": "imagenes/naranja.png",
+        "nombre": "Naranja",
+        "precio": 3000,
+        "cantidadXCajon": 18,
+        "id": 6
+    },
+    {
+        "imagen": "imagenes/palta.png",
+        "nombre": "Palta",
+        "precio": 3200,
+        "cantidadXCajon": 8,
+        "id": 7
+    },
+    {
+        "imagen": "imagenes/tomate.png",
+        "nombre": "Tomate",
+        "precio": 9000,
+        "cantidadXCajon": 18,
+        "id": 8
+    },
+    {
+        "imagen": "imagenes/uva.png",
+        "nombre": "Uva",
+        "precio": 15000,
+        "cantidadXCajon": 8,
+        "id": 9
+    },
+    {
+        "imagen": "imagenes/zanahoria.png",
+        "nombre": "Zanahoria",
+        "precio": 2600,
+        "cantidadXCajon": 14,
+        "id": 10
+    },
+    {
+        "imagen": "imagenes/zapallito.png",
+        "nombre": "Zapallito",
+        "precio": 2000,
+        "cantidadXCajon": 18,
+        "id": 11
+    },
+    {
+        "imagen": "imagenes/zapallo.png",
+        "nombre": "Zapallo",
+        "precio": 1600,
+        "cantidadXCajon": 18,
+        "id": 12
+    }
+]

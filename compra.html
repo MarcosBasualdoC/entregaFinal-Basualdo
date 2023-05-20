@@ -5,30 +5,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verdulería Online | Gracias</title>
-    <link rel="icon" href="favicon.png"/>
-    <link rel="stylesheet" href="estilos.css">
+    <title>Verdulería Online | Tienda</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="icon" href="imagenes/favicon.png">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
 
     <header>
-        <h1>--Verduleria Online--</h1>
+        <h1>Mayorista Central-Verduleria Online</h1>
+        <button class="mostrarCarrito"></button>
     </header>
-    
-    <main class="graciasBox">
-        <section class="gracias">
-        <h1>¡Gracias por su compra!</h1>
-        <h2>En breve se lo enviaremos a su domicilio</h2>
-        <h3>¡Vuelva pronto!</h3>
-        <button class="botones" type="button" onclick="location.href='index.html'">Volver a
-            comprar</button>
-        </section>
+
+    <main>
+
+        <form class="formulario">
+            <div class="datosFormulario">
+                <h2>Datos del Pedido</h2>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="direccion">Dirección de Envío:</label>
+                <input type="text" id="direccion" name="direccion" required>
+
+                <label for="telefono">Teléfono de Contacto:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="metodoFormulario">
+                <h2>Método de Pago</h2>
+                <label for="metodoPago">Selecciona el Método de Pago:</label>
+                <select id="metodoPago" name="metodoPago" required>
+                    <option value="">Seleccionar</option>
+                    <option value="efectivo">Tarjeta de Débito: **** **** **** 5484</option>
+                    <option value="tarjeta">Tarjeta de Crédito: **** **** **** 7412</option>
+                </select>
+
+                <input id="realizarPedido" class="pagarLimpiar" type="button" value="Realizar Pedido">
+            </div>
+        </form>
+
+
     </main>
 
 
-    <script src="item.js"></script>
-    <script src="app.js"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
